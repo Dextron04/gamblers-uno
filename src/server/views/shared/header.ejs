@@ -1,0 +1,22 @@
+<% var userId=typeof userId !=='undefined' ? userId : null; %>
+    <% var username=typeof username !=='undefined' ? username : null; %>
+        <header class="main-header">
+            <nav class="main-nav">
+                <div class="nav-content">
+                    <div class="logo">
+                        <a href="/">UNO Online</a>
+                    </div>
+                    <div class="nav-links">
+                        <a href="/howtoplay" class="howtoplay-link">How to Play</a>
+                        <a href="/faq" class="faq-link">FAQ</a>
+                        <% if (userId) { %>
+                            <span class="welcome-text">Welcome, <%= username %></span>
+                            <a href="/auth/logout" class="logout-btn">Logout</a>
+                            <% } else { %>
+                                <a href="/auth/login" class="login-btn">Login</a>
+                                <a href="/auth/register" class="register-btn">Register</a>
+                                <% } %>
+                    </div>
+                </div>
+            </nav>
+        </header>

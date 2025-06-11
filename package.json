@@ -1,0 +1,69 @@
+{
+  "name": "term-project-the-gamblers",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=18484559)",
+  "scripts": {
+    "start": "NODE_ENV=production node src/server/index.js",
+    "start:dev": "concurrently --names server,frontend -c blue,green \"npm run server:dev\" \"npm run frontend:dev\"",
+    "server:dev": "nodemon --exec node src/server/index.js --ext ejs, js --ignore public",
+    "frontend": "webpack --config webpack.config.js",
+    "frontend:dev": "webpack --config webpack.config.js --mode development --watch",
+    "prepare": "husky && husky install",
+    "db:rollback": "node-pg-migrate down -j js",
+    "db:create": "node-pg-migrate create",
+    "db:migrate": "node-pg-migrate up -j js",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sfsu-csc-667-spring-2025-roberts/term-project-the-gamblers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sfsu-csc-667-spring-2025-roberts/term-project-the-gamblers/issues"
+  },
+  "homepage": "https://github.com/sfsu-csc-667-spring-2025-roberts/term-project-the-gamblers#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.2",
+    "connect-pg-simple": "^10.0.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^5.0.1",
+    "express-session": "^1.18.1",
+    "http-errors": "^2.0.0",
+    "knex": "^3.1.0",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.14.0",
+    "nodemon": "^3.1.9",
+    "pg": "^8.14.1",
+    "serve-favicon": "^2.5.0",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/connect-livereload": "^0.6.3",
+    "@types/livereload": "^0.9.5",
+    "concurrently": "^9.1.2",
+    "connect-livereload": "^0.6.1",
+    "eslint": "^9.24.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.5.1",
+    "livereload": "^0.9.3",
+    "node-pg-migrate": "^7.9.1",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3",
+    "webpack": "^5.99.5",
+    "webpack-cli": "^6.0.1"
+  }
+}

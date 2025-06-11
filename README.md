@@ -1,0 +1,61 @@
+# 🎮 UNO Online Multiplayer Game
+
+Welcome to our **UNO Online Multiplayer** game! This web-based game allows users to create or join game rooms, play UNO with friends in real-time, and enjoy features like dynamic turns, special cards, in-game chat, and more.
+
+## 🧑‍💻 Team Members
+
+- 👤 **Igor Tello - itello@sfsu.edu**
+- 👤 **Tushin Kulshreshtha - tkulshreshtha@sfsu.edu**
+- 👤 **Jacob Lazzarini - jlazzarini@sfsu.edu**
+- 👤 **Kyle Nguyen - knguyen68@sfsu.edu**
+
+## ✨ Features
+
+- Real-time multiplayer gameplay with Socket.IO
+- Game rooms with host privileges
+- Special UNO card mechanics (Skip, Reverse, Draw Two, Wild)
+- Dynamic turn indicators
+- In-game chat system
+- "Call UNO!" button and status tracking
+
+## 🚀 Getting Started
+
+### 🛠️ Prerequisites
+
+- [Node.js](https://nodejs.org/) (v14 or later recommended)
+- [npm](https://www.npmjs.com/)
+
+---
+
+### ⚙️ Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/sfsu-csc-667-spring-2025-roberts/term-project-the-gamblers.git
+cd term-project-the-gamblers
+```
+
+2. Install Dependencies, found in package.json file:
+
+```bash
+npm install (dependency)
+```
+
+3. Set up the database:
+
+```bash
+npm run db:migrate
+```
+
+4. Start the development server:
+
+```bash
+npm run start:dev
+```
+
+---
+
+### 📜 License
+
+This project is for educational and demonstration purposes only. If you wish to use or extend it commercially, please contact the team for permissions.
